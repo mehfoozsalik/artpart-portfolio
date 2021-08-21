@@ -554,7 +554,6 @@ BUTTON
 @keyframes ReadySteady {
   from {
     transform: rotateX(0deg);
-    transform: rotate3d();
     opacity: 1;
   }
   to {
@@ -745,7 +744,6 @@ textarea:focus {
 
 .imageSection img {
   align-self: center;
-
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
   backdrop-filter: blur(4px);
@@ -1425,15 +1423,11 @@ scroll button
 .slideUp {
   animation-name: slideUp;
   -webkit-animation-name: slideUp;
-
   animation-duration: 1s;
   -webkit-animation-duration: 1s;
-
   animation-timing-function: ease;
   -webkit-animation-timing-function: ease;
-
   visibility: visible !important;
-
   margin-bottom: 0rem;
 }
 
@@ -2359,18 +2353,5 @@ SideBar
   }
   .insideCarosel img {
     object-fit: cover;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0s !important;
-    transition-delay: 0s !important;
   }
 }
