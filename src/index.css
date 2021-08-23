@@ -948,7 +948,7 @@ textarea:focus {
   justify-content: center;
   background-image: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0) 50%,
     rgba(0, 0, 0, 0.7) 80%,
     rgba(0, 0, 0, 0.9) 100%
   );
@@ -1016,22 +1016,23 @@ textarea:focus {
     rgba(0, 0, 0, 0.7) 100%
   );
 }
-.titleGridDiv:hover h3 {
-  opacity: 1;
+.titleGridDiv h3 {
+  transition: var(--mainTransition);
+  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4.6rem;
-}
-.titleGridDiv h3 {
-  transition: var(--mainTransition);
-  opacity: 0;
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--mainGrey);
   align-self: flex-end;
   margin-bottom: 16rem;
+}
+.titleGridDiv:hover h3 {
+  opacity: 1;
+
+  font-size: 4.6rem;
 }
 .NotFoundPage {
   height: 85vh;
@@ -1829,7 +1830,7 @@ scroll button
     object-fit: cover;
   }
   .bodySpace {
-    height: 10vh;
+    height: 22rem;
     width: 100%;
   }
   .aboutusDiv {
@@ -1931,19 +1932,19 @@ SideBar
     position: relative;
   }
 }
-@media only screen and (min-width: 414px) and (max-width: 880px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 850px) {
   html {
-    font-size: 26%;
+    font-size: 32%;
   }
   .SplashScreenDiv img {
-    width: 12rem;
+    width: 14rem;
   }
   .small {
     margin-left: -10rem;
   }
   .btn {
     font-size: 3.6rem;
-    padding: 1rem 3rem;
+    padding: 1.5rem 3rem;
   }
   .bgContainer {
     flex-direction: column-reverse;
@@ -1952,7 +1953,7 @@ SideBar
     width: 100%;
   }
   .bgImage img {
-    width: 35rem;
+    width: 65rem;
     margin: auto;
   }
   .title-container {
@@ -1968,11 +1969,11 @@ SideBar
     width: 90%;
   }
   .textHolder h2 {
-    line-height: 1.9rem;
+    line-height: 3rem;
   }
   .textHolder h3 {
-    line-height: 2.4rem;
-    letter-spacing: 0.1rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.3rem;
   }
   .imageSpan {
     width: 1.4rem;
@@ -2046,9 +2047,6 @@ SideBar
   .socialSide {
     display: none;
   }
-  .logo {
-    margin-left: 6rem;
-  }
   .SideBarlogo {
     z-index: 1001;
     display: flex;
@@ -2069,15 +2067,16 @@ SideBar
     z-index: 1001;
   }
   .logoLink img {
-    width: 6rem;
+    margin-left: 2rem;
+    width: 10rem;
     z-index: 1001;
   }
   .toggleBtnC {
     flex: 0.1;
     border: 0px;
     background: transparent;
-    width: 4rem;
-    height: 3rem;
+    width: 6rem;
+    height: 6rem;
     cursor: pointer;
     z-index: 1000;
     display: flex;
@@ -2087,21 +2086,21 @@ SideBar
   }
 
   .HamDiv {
-    width: 4rem;
-    height: 0.7rem;
+    width: 6rem;
+    height: 1rem;
     border-radius: 4px;
     background: var(--primaryColor);
     transition: var(--mainTransition);
   }
   .HamOne {
-    transform: translateY(140%) rotate(45deg);
+    transform: translateY(170%) rotate(45deg);
   }
   .HamTwo {
     transform: translateX(-1000%);
     opacity: 0;
   }
   .HamThree {
-    transform: translateY(-140%) rotate(-45deg);
+    transform: translateY(-170%) rotate(-45deg);
   }
   .galleryContainers {
     margin: 2rem;
@@ -2109,21 +2108,21 @@ SideBar
   }
   .tabdata {
     margin: 3rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .imgGridDiv img {
-    width: 100%;
+    width: 40rem;
     height: 20rem;
   }
   .titleGridDiv {
-    width: 100%;
+    width: 40rem;
     height: 20rem;
   }
   .back {
-    top: 12.5rem;
-    left: 1.5rem;
-    width: 6rem;
-    height: 4.5rem;
+    top: 25rem;
+    left: 4rem;
+    width: 8rem;
+    height: 6rem;
     z-index: 998;
   }
   .back img {
@@ -2199,6 +2198,275 @@ SideBar
 
   .SideBar-SocialIconsContainer a {
     width: 4rem;
+    margin: 1rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 28%;
+  }
+  .SplashScreenDiv img {
+    width: 14rem;
+  }
+  .small {
+    margin-left: -10rem;
+  }
+  .btn {
+    font-size: 3.6rem;
+    padding: 1.5rem 3rem;
+  }
+  .bgContainer {
+    flex-direction: column-reverse;
+  }
+  .bgImage {
+    width: 100%;
+  }
+  .bgImage img {
+    width: 65rem;
+    margin: auto;
+  }
+  .title-container {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 85vw;
+  }
+  .bodyContainer {
+    grid-template-columns: 1fr;
+    margin: 20rem auto;
+  }
+  .singleBodyDiv {
+    width: 90%;
+  }
+  .textHolder h2 {
+    line-height: 3rem;
+  }
+  .textHolder h3 {
+    line-height: 3.4rem;
+    letter-spacing: 0.3rem;
+  }
+  .imageSpan {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .contact {
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+  }
+  .contactForm {
+    width: 98%;
+  }
+  .contactForm h2 {
+    font-size: 4rem;
+  }
+  .inputsGroup {
+    margin: 2rem 3rem;
+  }
+
+  .inputsGroup input[type='text'],
+  input[type='tel'],
+  input[type='email'],
+  textarea {
+    font-size: 3rem;
+  }
+  .inputsCheck {
+    margin: 2rem;
+  }
+  .inputsCheck label {
+    font-size: 3.5rem;
+    margin: 0.5rem;
+  }
+  .checkboxButtons {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  .flexwrap {
+    display: flex;
+    align-items: center;
+  }
+  .flexwrap label {
+    margin-left: 1rem;
+    font-size: 3rem;
+  }
+  .flexwrap input[type='checkbox'] {
+    width: 4rem;
+    height: 2rem;
+  }
+  .flexwrap input[type='checkbox']::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .galleryText {
+    margin-top: 8rem;
+  }
+  .bottomSectionFooter {
+    flex-direction: column;
+    margin-bottom: 25rem;
+    height: 30vh;
+  }
+  .footerLogoSection {
+    display: none;
+  }
+  .logoContainersDiv {
+    margin-top: 5rem;
+  }
+  .header {
+    display: none;
+  }
+  .socialSide {
+    display: none;
+  }
+  .SideBarlogo {
+    z-index: 1001;
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    align-items: center;
+    margin: 2rem;
+  }
+  .positionAbsolute {
+    position: absolute;
+  }
+  .positionFixed {
+    position: fixed;
+  }
+
+  .logoLink {
+    flex: 0.9;
+    z-index: 1001;
+  }
+  .logoLink img {
+    margin-left: 2rem;
+    width: 10rem;
+    z-index: 1001;
+  }
+  .toggleBtnC {
+    flex: 0.1;
+    border: 0px;
+    background: transparent;
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .HamDiv {
+    width: 6rem;
+    height: 1rem;
+    border-radius: 4px;
+    background: var(--primaryColor);
+    transition: var(--mainTransition);
+  }
+  .HamOne {
+    transform: translateY(170%) rotate(45deg);
+  }
+  .HamTwo {
+    transform: translateX(-1000%);
+    opacity: 0;
+  }
+  .HamThree {
+    transform: translateY(-170%) rotate(-45deg);
+  }
+  .galleryContainers {
+    margin: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .tabdata {
+    margin: 3rem;
+    grid-template-columns: 1fr;
+  }
+  .imgGridDiv img {
+    width: 60rem;
+    height: 30rem;
+  }
+  .titleGridDiv {
+    width: 60rem;
+    height: 30rem;
+  }
+  .back {
+    top: 20rem;
+    left: 4rem;
+    width: 10rem;
+    height: 8rem;
+    z-index: 998;
+  }
+  .back img {
+    width: 2.5rem;
+  }
+  .S-G-Image-Container {
+    margin-top: 0;
+    width: 100vw;
+  }
+  .ab img {
+    width: 100vw;
+    border-radius: 0rem;
+  }
+  .projectTitle {
+    width: 100vw;
+    border-radius: 0rem;
+  }
+  .articlesSingle {
+    flex-direction: column;
+    width: 90%;
+  }
+  .divSingleGallerytext {
+    margin: 5rem auto;
+  }
+  .largecarsel {
+    width: 100%;
+  }
+  .insideCarosel {
+    height: 50vh;
+  }
+  .insideCarosel img {
+    object-fit: cover;
+  }
+
+  /* 
+---------------
+SideBar
+--------------- 
+*/
+
+  .sideBarContainer {
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0rem;
+    left: 0px;
+    transition: var(--mainTransition);
+    transform: translateX(200%);
+    background: var(--mainBackground);
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .showsideBar {
+    visibility: visible;
+    transform: translate(0%);
+    z-index: 999;
+  }
+
+  .SlidBar-Nav {
+    margin: 5rem;
+  }
+
+  .SideBar-NavLink {
+    font-size: 3.6rem;
+  }
+
+  .SideBar-SocialIcons {
+    bottom: 25rem;
+  }
+
+  .SideBar-SocialIconsContainer a {
+    width: 6rem;
     margin: 1rem;
   }
 }
@@ -2298,7 +2566,9 @@ SideBar
   .positionFixed {
     position: fixed;
   }
-
+  .galleryText {
+    margin-top: 16rem;
+  }
   .logoLink {
     flex: 0.9;
     z-index: 1001;
@@ -2375,6 +2645,286 @@ SideBar
   }
   .insideCarosel img {
     object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 550px) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    font-size: 26%;
+  }
+  .SplashScreenDiv img {
+    width: 12rem;
+  }
+  .small {
+    margin-left: -10rem;
+  }
+  .btn {
+    font-size: 3.6rem;
+    padding: 1rem 3rem;
+  }
+  .bgContainer {
+    flex-direction: column-reverse;
+  }
+  .bgImage {
+    width: 100%;
+  }
+  .bgImage img {
+    width: 35rem;
+    margin: auto;
+  }
+  .title-container {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 85vw;
+  }
+  .bodyContainer {
+    grid-template-columns: 1fr;
+    margin: 20rem auto;
+  }
+  .singleBodyDiv {
+    width: 90%;
+  }
+  .textHolder h2 {
+    line-height: 1.9rem;
+  }
+  .textHolder h3 {
+    line-height: 2.4rem;
+    letter-spacing: 0.1rem;
+  }
+  .imageSpan {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .contact {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .contactForm {
+    width: 98%;
+    height: 100%;
+  }
+  .contactForm h2 {
+    font-size: 4rem;
+  }
+  .inputsGroup {
+    margin: 2rem 3rem;
+  }
+
+  .inputsGroup input[type='text'],
+  input[type='tel'],
+  input[type='email'],
+  textarea {
+    font-size: 3rem;
+  }
+  .inputsCheck {
+    margin: 2rem;
+  }
+  .inputsCheck label {
+    font-size: 3.5rem;
+    margin: 0.5rem;
+  }
+  .checkboxButtons {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  .flexwrap {
+    display: flex;
+    align-items: center;
+  }
+  .flexwrap label {
+    margin-left: 1rem;
+    font-size: 3rem;
+  }
+  .flexwrap input[type='checkbox'] {
+    width: 4rem;
+    height: 2rem;
+  }
+  .flexwrap input[type='checkbox']::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .galleryText {
+    margin-top: 8rem;
+  }
+  .bottomSectionFooter {
+    flex-direction: column;
+    margin: 10rem 0 25rem 0;
+  }
+  .footerLogoSection {
+    display: none;
+  }
+  .logoContainersDiv {
+    margin-top: 5rem;
+  }
+  .header {
+    display: none;
+  }
+  .socialSide {
+    display: none;
+  }
+
+  .SideBarlogo {
+    z-index: 1001;
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    align-items: center;
+    margin: 2rem;
+  }
+  .positionAbsolute {
+    position: absolute;
+  }
+  .positionFixed {
+    position: fixed;
+  }
+
+  .logoLink {
+    flex: 0.9;
+    z-index: 1001;
+  }
+  .logoLink img {
+    width: 5rem;
+    z-index: 1001;
+  }
+  .toggleBtnC {
+    flex: 0.1;
+    border: 0px;
+    background: transparent;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .HamDiv {
+    width: 3rem;
+    height: 0.6rem;
+    border-radius: 4px;
+    background: var(--primaryColor);
+    transition: var(--mainTransition);
+  }
+  .HamOne {
+    transform: translateY(150%) rotate(45deg);
+  }
+  .HamTwo {
+    transform: translateX(-1000%);
+    opacity: 0;
+  }
+  .HamThree {
+    transform: translateY(-150%) rotate(-45deg);
+  }
+  .galleryContainers {
+    margin: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .tabdata {
+    margin: 3rem;
+    grid-template-columns: 1fr;
+  }
+  .imgGridDiv img {
+    width: 100%;
+    height: 20rem;
+  }
+  .titleGridDiv {
+    width: 100%;
+    height: 20rem;
+  }
+  .galleryImage {
+    width: 18rem;
+    height: 10rem;
+  }
+  .galleryTitle {
+    width: 18rem;
+    height: 10rem;
+  }
+  .galleryTitle label {
+    margin-bottom: 0.5rem;
+  }
+  .back {
+    top: 12.5rem;
+    left: 1.5rem;
+    width: 6rem;
+    height: 4.5rem;
+    z-index: 998;
+  }
+  .back img {
+    width: 2.5rem;
+  }
+  .S-G-Image-Container {
+    margin-top: 0;
+    width: 100vw;
+  }
+  .ab img {
+    width: 100vw;
+    border-radius: 0rem;
+  }
+  .projectTitle {
+    width: 100vw;
+    border-radius: 0rem;
+  }
+  .articlesSingle {
+    flex-direction: column;
+    width: 90%;
+  }
+  .divSingleGallerytext {
+    margin: 5rem auto;
+  }
+  .largecarsel {
+    width: 100%;
+  }
+  .insideCarosel {
+    height: 50vh;
+  }
+  .insideCarosel img {
+    object-fit: cover;
+  }
+
+  /* 
+---------------
+SideBar
+--------------- 
+*/
+
+  .sideBarContainer {
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0rem;
+    left: 0px;
+    transition: var(--mainTransition);
+    transform: translateX(200%);
+    background: var(--mainBackground);
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .showsideBar {
+    visibility: visible;
+    transform: translate(0%);
+    z-index: 999;
+  }
+
+  .SlidBar-Nav {
+    margin: 5rem;
+  }
+
+  .SideBar-NavLink {
+    font-size: 3.6rem;
+  }
+
+  .SideBar-SocialIcons {
+    bottom: 10rem;
+  }
+
+  .SideBar-SocialIconsContainer a {
+    width: 4rem;
+    margin: 1rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {
