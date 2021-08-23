@@ -2655,6 +2655,10 @@ SideBar
   .SplashScreenDiv img {
     width: 12rem;
   }
+  .bodySpace {
+    height: 8rem;
+    width: 100%;
+  }
   .small {
     margin-left: -10rem;
   }
