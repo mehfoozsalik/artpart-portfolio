@@ -58,13 +58,7 @@ Variables
 
   /* ----------Shadows---------- */
 
-  --lightShadow: 1px 1px 10px rgba(0, 23, 79, 0.377);
   --darkShadow: 2px 4px 16px rgba(0, 23, 79, 0.795);
-
-  /* ----------Radius---------- */
-
-  --mainBorderRadius: 0.25rem;
-  --mainbtnRadius: 26px;
 
   /* ----------Max Width---------- */
 
@@ -1813,9 +1807,11 @@ scroll button
     transform: translateY(-160%) rotate(-45deg);
   }
   .galleryContainers {
+    margin: 2.5rem;
     grid-template-columns: 1fr 1fr;
   }
   .tabdata {
+    margin: 3rem;
     grid-template-columns: 1fr;
   }
   .gallerySection {
@@ -2128,9 +2124,11 @@ SideBar
     transform: translateY(-140%) rotate(-45deg);
   }
   .galleryContainers {
+    margin: 2rem;
     grid-template-columns: 1fr 1fr;
   }
   .tabdata {
+    margin: 3rem;
     grid-template-columns: 1fr;
   }
   .imgGridDiv img {
@@ -2361,9 +2359,11 @@ SideBar
     transform: translateY(-160%) rotate(-45deg);
   }
   .galleryContainers {
+    margin: 2rem;
     grid-template-columns: 1fr 1fr;
   }
   .tabdata {
+    margin: 3rem;
     grid-template-columns: 1fr;
   }
   .back {
