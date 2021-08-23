@@ -39,38 +39,19 @@ Variables
   --mainFont: 'Bicillesta';
 
   /* ----------Animation---------- */
-
   --mainTransition: all 0.3s linear;
-
   /* ----------spacing---------- */
 
   --headerSpacing: 1.44px;
   --mainBackgroundSpacing: 1.2px;
   --headingSpacing: 2px;
-
   /* ----------FontSize---------- */
-
   --mainHeading: 9.6rem;
   --SecondHeading: 3.2rem;
   --ThirdHeading: 2.6rem;
   --paragraphc: 1.8rem;
-  --caption: 1.4rem;
-
   /* ----------Shadows---------- */
-
   --darkShadow: 2px 4px 16px rgba(0, 23, 79, 0.795);
-
-  /* ----------Max Width---------- */
-
-  --maxWidth: 1080px;
-
-  /* ----------minimum Width---------- */
-
-  --smallWidth: 760px;
-
-  /* ----------Fullwidth---------- */
-
-  --fullWidth: 1200px;
 }
 /* 
 ====== 
@@ -91,7 +72,6 @@ body {
     linear-gradient(180deg, #e9f6ff 0%, #e8f2fc 45%, #ffe8e8 100%) 0% 0%
     no-repeat padding-box;
   line-height: 1.4;
-
   font-weight: 300;
 }
 h1 {
@@ -640,7 +620,7 @@ BUTTON
 @keyframes ReadySteady {
   from {
     transform: rotateX(0deg);
-    transform: rotate3d();
+
     opacity: 1;
   }
   to {
